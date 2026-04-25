@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,10 @@
       box-sizing: border-box;
     }
 
+    html{
+      scroll-behavior: smooth;
+    }
+
     body{
       font-family: Arial, sans-serif;
       color: white;
@@ -21,9 +26,10 @@
       overflow-x: hidden;
     }
 
-    /* ANIMAÇÃO SUAVE */
+    /* ANIMAÇÃO */
 
     @keyframes aparecer {
+
       from{
         opacity: 0;
         transform: translateY(30px);
@@ -33,11 +39,13 @@
         opacity: 1;
         transform: translateY(0);
       }
+
     }
 
-    /* PRIMEIRA TELA */
+    /* TELA INICIAL */
 
     .inicio{
+
       height: 100vh;
 
       display: flex;
@@ -45,12 +53,15 @@
       align-items: center;
 
       background-image: url("fundo.jpg");
+
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+
     }
 
     .mensagem{
+
       background: rgba(0,0,0,0.65);
 
       padding: 50px;
@@ -63,30 +74,51 @@
       text-align: center;
 
       animation: aparecer 1.2s ease;
+
     }
 
     .mensagem h1{
+
       font-size: 4rem;
-      margin-bottom: 25px;
+
+      margin-bottom: 10px;
 
       animation: aparecer 1.4s ease;
+
+    }
+
+    .slogan{
+
+      font-size: 1.2rem;
+
+      opacity: 0.8;
+
+      margin-bottom: 25px;
+
+      animation: aparecer 1.6s ease;
+
     }
 
     .mensagem p{
+
       font-size: 1.3rem;
+
       line-height: 1.8;
 
       animation: aparecer 1.8s ease;
+
     }
 
     /* ÁREA DOS PRODUTOS */
 
     .produtos{
+
       min-height: 100vh;
 
       background: linear-gradient(to bottom, #111, #222);
 
       display: flex;
+
       justify-content: center;
       align-items: center;
 
@@ -95,11 +127,13 @@
       padding: 120px 40px;
 
       flex-wrap: nowrap;
+
     }
 
     /* CARDS */
 
     .card{
+
       width: 350px;
       height: 520px;
 
@@ -127,40 +161,81 @@
       transition: 0.3s;
 
       animation: aparecer 1.5s ease;
+
     }
 
     .card:hover{
+
       transform: scale(1.03);
+
+      box-shadow:
+      0 0 25px rgba(255,255,255,0.15),
+      0 0 40px rgba(255,255,255,0.08);
+
     }
 
     .card h2{
+
       font-size: 2rem;
 
-      margin-bottom: 25px;
+      margin-bottom: 15px;
 
       animation: aparecer 1.7s ease;
+
+    }
+
+    .preco{
+
+      font-size: 1.4rem;
+
+      color: #ffd86b;
+
+      margin-bottom: 20px;
+
     }
 
     .linha{
+
       width: 100%;
       height: 1px;
 
       background: rgba(255,255,255,0.2);
 
       margin-bottom: 25px;
+
     }
 
     .card p{
+
       font-size: 1.15rem;
+
       line-height: 1.8;
 
       animation: aparecer 2s ease;
+
+    }
+
+    /* RODAPÉ */
+
+    footer{
+
+      text-align: center;
+
+      padding: 30px;
+
+      background: #111;
+
+      opacity: 0.7;
+
+      font-size: 0.95rem;
+
     }
 
   </style>
 </head>
 
 <body>
+
 
   <!-- TELA INICIAL -->
 
@@ -169,6 +244,10 @@
     <div class="mensagem">
 
       <h1>Glow Lip</h1>
+
+      <h3 class="slogan">
+        Hidratação natural para seus lábios ✨
+      </h3>
 
       <p>
         A Glow Lip nasceu com a missão de trazer hidratação,
@@ -181,7 +260,7 @@
   </section>
 
 
-  <!-- ÁREA DOS PRODUTOS -->
+  <!-- PRODUTOS -->
 
   <section class="produtos">
 
@@ -192,10 +271,14 @@
 
       <h2>Glow Lip de Menta 🍃</h2>
 
+      <h3 class="preco">R$ 7,00</h3>
+
       <div class="linha"></div>
 
       <p>
+
         Feito com:
+
         <br><br>
 
         • Cera de abelha
@@ -208,6 +291,7 @@
         <br>
 
         • Aromatizante de menta
+
       </p>
 
     </div>
@@ -219,10 +303,14 @@
 
       <h2>Glow Lip de Laranja 🍊</h2>
 
+      <h3 class="preco">R$ 7,00</h3>
+
       <div class="linha"></div>
 
       <p>
+
         Feito com:
+
         <br><br>
 
         • Cera de abelha
@@ -235,11 +323,22 @@
         <br>
 
         • Aromatizante de laranja
+
       </p>
 
     </div>
 
   </section>
 
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    Glow Lip © 2026 | Projeto Escolar
+
+  </footer>
+
 </body>
+
 </html>
