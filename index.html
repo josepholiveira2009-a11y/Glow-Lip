@@ -18,6 +18,7 @@
       font-family: Arial, sans-serif;
       color: white;
       background-color: #111;
+      overflow-x: hidden;
     }
 
     /* PRIMEIRA TELA */
@@ -36,75 +37,84 @@
     }
 
     .mensagem{
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.65);
 
-      padding: 40px;
+      padding: 50px;
 
-      border-radius: 20px;
+      border-radius: 25px;
 
       width: 80%;
-      max-width: 600px;
+      max-width: 700px;
 
       text-align: center;
     }
 
     .mensagem h1{
-      font-size: 3rem;
-      margin-bottom: 20px;
+      font-size: 4rem;
+      margin-bottom: 25px;
     }
 
     .mensagem p{
-      font-size: 1.2rem;
-      line-height: 1.6;
+      font-size: 1.3rem;
+      line-height: 1.8;
     }
 
-    /* SEGUNDA PARTE */
+    /* ÁREA DOS PRODUTOS */
 
     .produtos{
-  min-height: 100vh;
+      min-height: 100vh;
 
-  background: #1a1a1a;
+      background: #1b1b1b;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  gap: 140px;
+      gap: 150px;
 
-  padding: 80px 20px;
+      padding: 120px 40px;
 
-  flex-wrap: nowrap;
-}
+      flex-wrap: nowrap;
+    }
 
-   .card{
-  background: rgba(120,120,120,0.35);
+    /* RETÂNGULOS */
 
-  backdrop-filter: blur(5px);
+    .card{
+      width: 350px;
+      height: 600px;
 
-  border-radius: 20px;
+      background: rgba(180,180,180,0.20);
 
-  padding: 40px 30px;
+      border: 1px solid rgba(255,255,255,0.15);
 
-  width: 320px;
-  height: 520px;
+      backdrop-filter: blur(8px);
 
-  text-align: center;
+      border-radius: 30px;
 
-  border: 1px solid rgba(255,255,255,0.2);
+      padding: 40px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      transition: 0.3s;
+    }
+
+    .card:hover{
+      transform: scale(1.03);
+    }
 
     .card h2{
-      margin-bottom: 20px;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      margin-bottom: 30px;
     }
 
     .card p{
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: 1.2rem;
+      line-height: 1.8;
     }
 
   </style>
@@ -112,7 +122,7 @@
 
 <body>
 
-  <!-- PRIMEIRA TELA -->
+  <!-- TELA INICIAL -->
 
   <section class="inicio">
 
@@ -121,8 +131,9 @@
       <h1>Glow Lip</h1>
 
       <p>
-        A Glow Lip nasceu com a missão de trazer bem-estar,
-        hidratação e autocuidado para os seus lábios.
+        A Glow Lip nasceu com a missão de trazer hidratação,
+        beleza e autocuidado para os seus lábios,
+        oferecendo produtos naturais e suaves para o dia a dia.
       </p>
 
     </div>
@@ -130,31 +141,56 @@
   </section>
 
 
-  <!-- SEGUNDA TELA -->
+  <!-- PRODUTOS -->
 
   <section class="produtos">
+
+
+    <!-- PRODUTO 1 -->
 
     <div class="card">
 
       <h2>Glow Lip de Menta 🍃</h2>
 
       <p>
-        Feito com: Cera de abelha,
-        manteiga de cacau e óleo de coco
-        com aromatizante de menta.
+        Feito com:
+        <br><br>
+
+        • Cera de abelha
+        <br>
+
+        • Manteiga de cacau
+        <br>
+
+        • Óleo de coco
+        <br>
+
+        • Aromatizante de menta
       </p>
 
     </div>
 
+
+    <!-- PRODUTO 2 -->
 
     <div class="card">
 
       <h2>Glow Lip de Laranja 🍊</h2>
 
       <p>
-        Feito com: Cera de abelha,
-        manteiga de cacau e óleo de coco
-        com aromatizante de laranja.
+        Feito com:
+        <br><br>
+
+        • Cera de abelha
+        <br>
+
+        • Manteiga de cacau
+        <br>
+
+        • Óleo de coco
+        <br>
+
+        • Aromatizante de laranja
       </p>
 
     </div>
