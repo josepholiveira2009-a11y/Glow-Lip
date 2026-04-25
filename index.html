@@ -21,6 +21,20 @@
       overflow-x: hidden;
     }
 
+    /* ANIMAÇÃO SUAVE */
+
+    @keyframes aparecer {
+      from{
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     /* PRIMEIRA TELA */
 
     .inicio{
@@ -47,16 +61,22 @@
       max-width: 700px;
 
       text-align: center;
+
+      animation: aparecer 1.2s ease;
     }
 
     .mensagem h1{
       font-size: 4rem;
       margin-bottom: 25px;
+
+      animation: aparecer 1.4s ease;
     }
 
     .mensagem p{
       font-size: 1.3rem;
       line-height: 1.8;
+
+      animation: aparecer 1.8s ease;
     }
 
     /* ÁREA DOS PRODUTOS */
@@ -64,7 +84,7 @@
     .produtos{
       min-height: 100vh;
 
-      background: #1b1b1b;
+      background: linear-gradient(to bottom, #111, #222);
 
       display: flex;
       justify-content: center;
@@ -77,31 +97,37 @@
       flex-wrap: nowrap;
     }
 
-    /* RETÂNGULOS */
+    /* CARDS */
 
     .card{
-  width: 350px;
-  height: 600px;
+      width: 350px;
+      height: 520px;
 
-  background: rgba(180,180,180,0.20);
+      background: rgba(180,180,180,0.20);
 
-  border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.15);
 
-  backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
 
-  border-radius: 30px;
+      border-radius: 30px;
 
-  padding: 40px;
-  padding-top: 60px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
 
-  display: flex;
-  flex-direction: column;
+      padding: 40px;
+      padding-top: 60px;
 
-  justify-content: flex-start;
-  align-items: flex-start;
+      display: flex;
+      flex-direction: column;
 
-  text-align: left;
-}
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      text-align: left;
+
+      transition: 0.3s;
+
+      animation: aparecer 1.5s ease;
+    }
 
     .card:hover{
       transform: scale(1.03);
@@ -109,12 +135,26 @@
 
     .card h2{
       font-size: 2rem;
-      margin-bottom: 30px;
+
+      margin-bottom: 25px;
+
+      animation: aparecer 1.7s ease;
+    }
+
+    .linha{
+      width: 100%;
+      height: 1px;
+
+      background: rgba(255,255,255,0.2);
+
+      margin-bottom: 25px;
     }
 
     .card p{
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       line-height: 1.8;
+
+      animation: aparecer 2s ease;
     }
 
   </style>
@@ -141,7 +181,7 @@
   </section>
 
 
-  <!-- PRODUTOS -->
+  <!-- ÁREA DOS PRODUTOS -->
 
   <section class="produtos">
 
@@ -151,6 +191,8 @@
     <div class="card">
 
       <h2>Glow Lip de Menta 🍃</h2>
+
+      <div class="linha"></div>
 
       <p>
         Feito com:
@@ -176,6 +218,8 @@
     <div class="card">
 
       <h2>Glow Lip de Laranja 🍊</h2>
+
+      <div class="linha"></div>
 
       <p>
         Feito com:
