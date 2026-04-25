@@ -1,125 +1,334 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glow Lip</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <title>Glow Lip</title>
 
-body{
-  margin:0;
-  font-family:Arial;
-  background:#111;
-  color:white;
-}
+  <style>
 
-.inicio{
-  height:100vh;
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+    html{
+      scroll-behavior: smooth;
+    }
 
-  background:
-  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-  url("fundo.jpg");
+    body{
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: #111;
+      overflow-x: hidden;
+    }
 
-  background-size:cover;
-  background-position:center;
-}
+    /* ANIMAÇÃO */
 
-.mensagem{
+    @keyframes aparecer{
 
-  background:rgba(0,0,0,0.6);
+      from{
+        opacity: 0;
+        transform: translateY(30px);
+      }
 
-  padding:50px;
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-  border-radius:20px;
+    }
 
-  width:70%;
+    /* PRIMEIRA TELA */
 
-  text-align:center;
+    .inicio{
 
-}
+      height: 100vh;
 
-.produtos{
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  min-height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+      url("fundo.jpg");
 
-  display:flex;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-  justify-content:center;
+    }
 
-  gap:150px;
+    .mensagem{
 
-  padding:100px;
+      background: rgba(0,0,0,0.65);
 
-  background:#1b1b1b;
+      padding: 50px;
 
-}
+      border-radius: 25px;
 
-.card{
+      width: 80%;
+      max-width: 700px;
 
-  width:350px;
-  height:500px;
+      text-align: center;
 
-  background:rgba(40,40,40,0.6);
+      animation: aparecer 1.2s ease;
 
-  border-radius:25px;
+      backdrop-filter: blur(5px);
 
-  padding:40px;
+    }
 
-}
+    .mensagem h1{
 
-</style>
+      font-size: 4rem;
+
+      margin-bottom: 10px;
+
+      animation: aparecer 1.4s ease;
+
+    }
+
+    .slogan{
+
+      font-size: 1.2rem;
+
+      opacity: 0.8;
+
+      margin-bottom: 25px;
+
+      animation: aparecer 1.6s ease;
+
+    }
+
+    .mensagem p{
+
+      font-size: 1.3rem;
+
+      line-height: 1.8;
+
+      animation: aparecer 1.8s ease;
+
+    }
+
+    /* ÁREA DOS PRODUTOS */
+
+    .produtos{
+
+      min-height: 100vh;
+
+      background: linear-gradient(to bottom, #111, #222);
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 150px;
+
+      padding: 120px 40px;
+
+      flex-wrap: nowrap;
+
+    }
+
+    /* CARDS */
+
+    .card{
+
+      width: 350px;
+      height: 560px;
+
+      background: rgba(40,40,40,0.55);
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+      backdrop-filter: blur(8px);
+
+      border-radius: 30px;
+
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+
+      padding: 40px;
+      padding-top: 60px;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      text-align: left;
+
+      transition: 0.3s;
+
+      animation: aparecer 1.5s ease;
+
+    }
+
+    .card:hover{
+
+      transform: scale(1.03);
+
+      box-shadow:
+      0 0 25px rgba(255,255,255,0.15),
+      0 0 40px rgba(255,255,255,0.08);
+
+    }
+
+    .card h2{
+
+      font-size: 2rem;
+
+      margin-bottom: 25px;
+
+      animation: aparecer 1.7s ease;
+
+    }
+
+    .linha{
+
+      width: 100%;
+      height: 1px;
+
+      background: rgba(255,255,255,0.2);
+
+      margin-bottom: 25px;
+
+    }
+
+    .card p{
+
+      font-size: 1.15rem;
+
+      line-height: 1.8;
+
+      animation: aparecer 2s ease;
+
+    }
+
+    /* RODAPÉ */
+
+    footer{
+
+      text-align: center;
+
+      padding: 30px;
+
+      background: #111;
+
+      opacity: 0.7;
+
+      font-size: 0.95rem;
+
+    }
+
+  </style>
 </head>
 
 <body>
 
-<section class="inicio">
 
-<div class="mensagem">
+  <!-- TELA INICIAL -->
 
-<h1>Glow Lip</h1>
+  <section class="inicio">
 
-<p>
-Hidratação natural para seus lábios.
-</p>
+    <div class="mensagem">
 
-</div>
+      <h1>Glow Lip</h1>
 
-</section>
+      <h3 class="slogan">
+        Hidratação natural para seus lábios ✨
+      </h3>
 
-<section class="produtos">
+      <p>
+        A Glow Lip nasceu com a missão de trazer hidratação,
+        beleza e autocuidado para os seus lábios,
+        oferecendo produtos naturais e suaves para o dia a dia.
+      </p>
 
-<div class="card">
+    </div>
 
-<h2>Glow Lip de Menta 🍃</h2>
+  </section>
 
-<p>
-Cera de abelha,
-manteiga de cacau,
-óleo de coco
-e aromatizante de menta.
-</p>
 
-</div>
+  <!-- PRODUTOS -->
 
-<div class="card">
+  <section class="produtos">
 
-<h2>Glow Lip de Laranja 🍊</h2>
 
-<p>
-Cera de abelha,
-manteiga de cacau,
-óleo de coco
-e aromatizante de laranja.
-</p>
+    <!-- PRODUTO 1 -->
 
-</div>
+    <div class="card">
 
-</section>
+      <h2>Glow Lip de Menta 🍃</h2>
+
+      <div class="linha"></div>
+
+      <p>
+
+        Feito com:
+
+        <br><br>
+
+        • Cera de abelha
+        <br>
+
+        • Manteiga de cacau
+        <br>
+
+        • Óleo de coco
+        <br>
+
+        • Aromatizante de menta
+
+      </p>
+
+    </div>
+
+
+    <!-- PRODUTO 2 -->
+
+    <div class="card">
+
+      <h2>Glow Lip de Laranja 🍊</h2>
+
+      <div class="linha"></div>
+
+      <p>
+
+        Feito com:
+
+        <br><br>
+
+        • Cera de abelha
+        <br>
+
+        • Manteiga de cacau
+        <br>
+
+        • Óleo de coco
+        <br>
+
+        • Aromatizante de laranja
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    Glow Lip © 2026 | Projeto Escolar
+
+  </footer>
 
 </body>
+
 </html>
