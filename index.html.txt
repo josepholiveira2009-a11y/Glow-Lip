@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Produto</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: url('fundo.jpg') center/cover no-repeat;
+
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>Nome do Produto</h1>
+
+    <p>
+      Glow Lip é uma empresa criada pelos alunos: Joseph, Cauã Coelho, Cauã Rocha, Gabriel , Arthur,
+David e Fernanda. Com a intenção de trazer um melhor bom estar e auto cuidado aos clientes, eles trouxeram
+a Glow lip como a solução para seus lábios rececados.
+    </p>
+  </div>
+
+</body>
+</html>
