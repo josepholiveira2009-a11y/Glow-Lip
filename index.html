@@ -28,7 +28,7 @@
 
     /* ANIMAÇÃO */
 
-    @keyframes aparecer {
+    @keyframes aparecer{
 
       from{
         opacity: 0;
@@ -42,7 +42,7 @@
 
     }
 
-    /* TELA INICIAL */
+    /* PRIMEIRA TELA */
 
     .inicio{
 
@@ -52,7 +52,9 @@
       justify-content: center;
       align-items: center;
 
-      background-image: url("fundo.jpg");
+      background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+      url("fundo.jpg");
 
       background-size: cover;
       background-position: center;
@@ -74,6 +76,8 @@
       text-align: center;
 
       animation: aparecer 1.2s ease;
+
+      backdrop-filter: blur(5px);
 
     }
 
@@ -135,9 +139,9 @@
     .card{
 
       width: 350px;
-      height: 520px;
+      height: 560px;
 
-      background: rgba(180,180,180,0.20);
+      background: rgba(40,40,40,0.55);
 
       border: 1px solid rgba(255,255,255,0.15);
 
@@ -188,7 +192,9 @@
 
       font-size: 1.4rem;
 
-      color: #ffd86b;
+      color: #ffdf8c;
+
+      text-shadow: 0 0 10px rgba(255,223,140,0.4);
 
       margin-bottom: 20px;
 
@@ -212,6 +218,36 @@
       line-height: 1.8;
 
       animation: aparecer 2s ease;
+
+    }
+
+    /* BOTÃO */
+
+    .botao{
+
+      margin-top: 30px;
+
+      padding: 12px 25px;
+
+      border: none;
+
+      border-radius: 12px;
+
+      background: white;
+
+      color: black;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+
+    }
+
+    .botao:hover{
+
+      transform: scale(1.05);
 
     }
 
@@ -294,6 +330,10 @@
 
       </p>
 
+      <button class="botao">
+        Comprar
+      </button>
+
     </div>
 
 
@@ -325,6 +365,10 @@
         • Aromatizante de laranja
 
       </p>
+
+      <button class="botao">
+        Comprar
+      </button>
 
     </div>
 
